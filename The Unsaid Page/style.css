@@ -1,0 +1,283 @@
+/* --- 1. Variables & Setup --- */
+:root {
+    /* Palette: Cream, Parchment, Deep Brown, Muted Blue */
+    --bg-color: #eae1c9;       /* Main background */
+    --paper-color: #FFFFFF;    /* Card/Paper background */
+    --text-color: #3B3836;     /* Deep brown/grey for readability */
+    --accent-color: #6C8899;   /* Muted Blue for links/buttons */
+    --border-color: #E6E2D8;   /* Subtle borders */
+    
+    /* Typography */
+    /* 'Playfair Display' for the "Literature" feel */
+    --font-serif: 'Playfair Display', serif; 
+    /* 'Lato' for clean navigation */
+    --font-sans: 'Lato', sans-serif;         
+    
+    --spacing-standard: 2rem;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-serif);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 2. Typography & Images --- */
+h1, h2, h3 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #2c2a29;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 2px;
+}
+
+/* --- 3. Navigation --- */
+header {
+    padding: 3rem 5%;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.site-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+nav a.active {
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 4px;
+}
+
+/* --- 4. Layout Container --- */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* --- 5. Home Page Styles --- */
+.hero {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 2rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.featured-section {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+/* Mobile responsive for features */
+@media (max-width: 768px) {
+    .featured-section {
+        flex-direction: column;
+    }
+}
+
+.featured-image {
+    flex: 1;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.03);
+}
+
+.featured-text {
+    flex: 1;
+}
+
+/* --- 6. Poem Grid (Cards) --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--paper-color);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-meta {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.card-excerpt {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* --- 7. Stories List --- */
+.story-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.story-item {
+    background: var(--paper-color);
+    padding: 2.5rem;
+    border-left: 3px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story-item:hover {
+    border-left-color: var(--accent-color);
+}
+
+.story-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.reading-time {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: #888;
+    white-space: nowrap;
+}
+
+/* --- 8. Individual Reading Page --- */
+.reader-view {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--paper-color);
+    padding: 4rem;
+    box-shadow: 0 0 30px rgba(0,0,0,0.02);
+}
+
+.work-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+}
+
+.work-content {
+    font-size: 1.15rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+}
+
+.work-content p {
+    margin-bottom: 1.5rem;
+    text-indent: 2rem; /* Classic book indentation */
+}
+
+/* --- 9. Submit Form --- */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 1rem;
+    background: var(--paper-color);
+    border: 1px solid var(--border-color);
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+button.submit-btn {
+    background-color: var(--text-color);
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button.submit-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: #999;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+}

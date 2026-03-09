@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit | The Unsaid Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233B3836' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'></path><path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'></path></svg>">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="site-title">The Unsaid Page</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="poems.html">Poems</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="submit.html" class="active">Submit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Submit Your Work</h2>
+        <p style="text-align: center; margin-bottom: 3rem; color: #666;">Share your unsaid words with our quiet community.</p>
+
+        <div class="form-wrapper">
+            <form action="#" method="POST">
+                
+                <div class="form-group">
+                    <label for="name">Author Name (or Pen Name)</label>
+                    <input type="text" id="name" placeholder="e.g. Jane Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Where can we reach you?">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Submission Type</label>
+                    <select id="type">
+                        <option value="poem">Poem</option>
+                        <option value="story">Short Story</option>
+                        <option value="prose">Prose</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Title of Work</label>
+                    <input type="text" id="title">
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea id="content" rows="12" placeholder="Paste your story or poem here..."></textarea>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="button" class="submit-btn" onclick="alert('Thank you. Your words have been received.')">Send Submission</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 The Unsaid Page.
+    </footer>
+
+</body>
+</html>
