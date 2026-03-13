@@ -1,0 +1,41 @@
+.brutal-skeleton {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.brutal-skeleton-read {
+    padding: 0 2rem;
+}
+
+.brutal-skeleton-line {
+    height: 1.5rem;
+    background: var(--text-muted);
+    margin-bottom: 1rem;
+    width: 100%;
+    animation: brutal-pulse 1.5s infinite ease-in-out;
+}
+
+.brutal-skeleton-img {
+    height: 200px;
+    background: var(--text-muted);
+    margin-bottom: 2rem;
+    width: 100%;
+    animation: brutal-pulse 1.5s infinite ease-in-out;
+}
+
+.brutal-skeleton-line.short {
+    width: 60%;
+}
+
+.brutal-skeleton-line.title {
+    height: 2.5rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+@keyframes brutal-pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
